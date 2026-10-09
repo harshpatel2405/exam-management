@@ -1,0 +1,312 @@
+{
+  "title": "C Programming Language Question Bank",
+  "subject": "C Programming",
+  "description": "Comprehensive 20-question bank covering C fundamentals, pointers, memory, data structures, and functions.",
+  "questions": [
+    {
+      "questionId": "C-101",
+      "subject": "C Programming",
+      "topic": "Data Types & Operators",
+      "subtopic": "Basic Data Types",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "questionText": "What is the guaranteed minimum size of a `char` data type in C standard?",
+      "options": ["1 byte", "2 bytes", "4 bytes", "Depends on OS compiler"],
+      "correctAnswers": ["1 byte"],
+      "explanation": "In standard C, sizeof(char) is defined to be exactly 1 byte.",
+      "marks": 1,
+      "negativeMarks": 0.25
+    },
+    {
+      "questionId": "C-102",
+      "subject": "C Programming",
+      "topic": "Control Flow & Loops",
+      "subtopic": "Loop Control",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "questionText": "Which keyword is used to immediately terminate a `for` or `while` loop in C?",
+      "options": ["exit", "break", "continue", "return"],
+      "correctAnswers": ["break"],
+      "explanation": "`break` terminates execution of the nearest enclosing loop or switch statement.",
+      "marks": 1,
+      "negativeMarks": 0.25
+    },
+    {
+      "questionId": "C-103",
+      "subject": "C Programming",
+      "topic": "Pointers & Memory",
+      "subtopic": "Pointer Basics",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "questionText": "What happens when you attempt to dereference a wild or uninitialized pointer in C?",
+      "options": [
+        "It always returns 0",
+        "It causes undefined behavior or segmentation fault",
+        "The compiler throws a syntax error",
+        "It automatically allocates memory"
+      ],
+      "correctAnswers": ["It causes undefined behavior or segmentation fault"],
+      "explanation": "Dereferencing uninitialized pointers accesses arbitrary memory, leading to undefined behavior or crash.",
+      "marks": 2,
+      "negativeMarks": 0.5
+    },
+    {
+      "questionId": "C-104",
+      "subject": "C Programming",
+      "topic": "Pointers & Memory",
+      "subtopic": "Pointer Arithmetic",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "questionText": "Given the snippet below, what is the value of `x` after execution?",
+      "codeSnippet": "int x = 10;\nint *p = &x;\n*p = 25;",
+      "options": ["10", "25", "0", "Memory address of x"],
+      "correctAnswers": ["25"],
+      "explanation": "`*p = 25` modifies the value at memory address `&x`, changing `x` to 25.",
+      "marks": 2,
+      "negativeMarks": 0.5
+    },
+    {
+      "questionId": "C-105",
+      "subject": "C Programming",
+      "topic": "Pointers & Memory",
+      "subtopic": "Dynamic Memory Allocation",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "questionText": "Which standard header file must be included to use `malloc()`, `calloc()`, and `free()`?",
+      "options": ["<stdio.h>", "<stdlib.h>", "<string.h>", "<memory.h>"],
+      "correctAnswers": ["<stdlib.h>"],
+      "explanation": "`<stdlib.h>` contains prototypes for dynamic memory allocation functions in C.",
+      "marks": 1,
+      "negativeMarks": 0.25
+    },
+    {
+      "questionId": "C-106",
+      "subject": "C Programming",
+      "topic": "Arrays & Strings",
+      "subtopic": "String Literals vs Arrays",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "questionText": "What is the key difference between `char str1[] = \"hello\";` and `char *str2 = \"hello\";`?",
+      "options": [
+        "str1 is stored in read-only memory, while str2 is on the stack",
+        "str1 is a modifiable array on the stack; str2 points to a read-only string literal",
+        "str1 requires free(), while str2 does not",
+        "There is no difference"
+      ],
+      "correctAnswers": [
+        "str1 is a modifiable array on the stack; str2 points to a read-only string literal"
+      ],
+      "explanation": "Modifying elements of str1 is valid; modifying characters via str2 causes undefined behavior.",
+      "marks": 3,
+      "negativeMarks": 1.0
+    },
+    {
+      "questionId": "C-107",
+      "subject": "C Programming",
+      "topic": "Data Types & Operators",
+      "subtopic": "Integer Literals",
+      "difficulty": "easy",
+      "questionType": "msq",
+      "questionText": "Which of the following are valid integer constant representations in C?",
+      "options": ["0x1A (Hexadecimal)", "075 (Octal)", "100L (Long Integer)", "0b1010 (Standard ANSI C89 Binary)"],
+      "correctAnswers": ["0x1A (Hexadecimal)", "075 (Octal)", "100L (Long Integer)"],
+      "explanation": "Hexadecimal (0x), Octal (0 prefix), and Long suffix (L) are standard ANSI C constants.",
+      "marks": 3,
+      "negativeMarks": 0.5
+    },
+    {
+      "questionId": "C-108",
+      "subject": "C Programming",
+      "topic": "Pointers & Memory",
+      "subtopic": "Dynamic Allocation",
+      "difficulty": "medium",
+      "questionType": "msq",
+      "questionText": "Which of the following functions are used for dynamic memory management in C?",
+      "options": ["malloc()", "calloc()", "realloc()", "alloc()"],
+      "correctAnswers": ["malloc()", "calloc()", "realloc()"],
+      "explanation": "`malloc`, `calloc`, and `realloc` manage heap allocation in standard C.",
+      "marks": 3,
+      "negativeMarks": 0.5
+    },
+    {
+      "questionId": "C-109",
+      "subject": "C Programming",
+      "topic": "Structures & Unions",
+      "subtopic": "Unions",
+      "difficulty": "medium",
+      "questionType": "msq",
+      "questionText": "Which statements correctly describe a `union` in C?",
+      "options": [
+        "All members share the same starting memory location",
+        "Total memory allocated is equal to the size of its largest member",
+        "Writing a new member overwrites the value of previously written members",
+        "Every member has its own separate memory address"
+      ],
+      "correctAnswers": [
+        "All members share the same starting memory location",
+        "Total memory allocated is equal to the size of its largest member",
+        "Writing a new member overwrites the value of previously written members"
+      ],
+      "explanation": "A union allows storing different data types in the same shared memory space.",
+      "marks": 3,
+      "negativeMarks": 0.5
+    },
+    {
+      "questionId": "C-110",
+      "subject": "C Programming",
+      "topic": "Control Flow & Loops",
+      "subtopic": "Jumps",
+      "difficulty": "hard",
+      "questionType": "msq",
+      "questionText": "Which of the following keywords perform explicit control flow jumps in C?",
+      "options": ["goto", "break", "continue", "return"],
+      "correctAnswers": ["goto", "break", "continue", "return"],
+      "explanation": "All 4 keywords transfer control to another instruction address.",
+      "marks": 3,
+      "negativeMarks": 0.5
+    },
+    {
+      "questionId": "C-111",
+      "subject": "C Programming",
+      "topic": "Arrays & Strings",
+      "subtopic": "Array Indexing",
+      "difficulty": "easy",
+      "questionType": "true_false",
+      "questionText": "In C, array indexing is 0-based, meaning the first element of `int arr[5]` is `arr[0]`.",
+      "options": ["True", "False"],
+      "correctAnswers": ["True"],
+      "explanation": "C arrays always start at index 0 up to size - 1.",
+      "marks": 1,
+      "negativeMarks": 0
+    },
+    {
+      "questionId": "C-112",
+      "subject": "C Programming",
+      "topic": "Functions & Recursion",
+      "subtopic": "Function Overloading",
+      "difficulty": "easy",
+      "questionType": "true_false",
+      "questionText": "Standard C supports native function overloading (defining multiple functions with identical names but different parameter signatures).",
+      "options": ["True", "False"],
+      "correctAnswers": ["False"],
+      "explanation": "Standard C does not support function overloading; C++ introduced function overloading.",
+      "marks": 1,
+      "negativeMarks": 0
+    },
+    {
+      "questionId": "C-113",
+      "subject": "C Programming",
+      "topic": "Pointers & Memory",
+      "subtopic": "Memory Initialization",
+      "difficulty": "medium",
+      "questionType": "true_false",
+      "questionText": "The `malloc()` function automatically initializes all allocated bytes to zero.",
+      "options": ["True", "False"],
+      "correctAnswers": ["False"],
+      "explanation": "`malloc()` leaves memory uninitialized (garbage values); `calloc()` initializes memory to zero.",
+      "marks": 1,
+      "negativeMarks": 0
+    },
+    {
+      "questionId": "C-114",
+      "subject": "C Programming",
+      "topic": "Structures & Unions",
+      "subtopic": "Self-Referential Structs",
+      "difficulty": "medium",
+      "questionType": "true_false",
+      "questionText": "A structure definition in C can contain a pointer member pointing to a structure of the same type.",
+      "options": ["True", "False"],
+      "correctAnswers": ["True"],
+      "explanation": "Self-referential structures (e.g. `struct Node { int data; struct Node *next; };`) form linked lists and trees.",
+      "marks": 1,
+      "negativeMarks": 0
+    },
+    {
+      "questionId": "C-115",
+      "subject": "C Programming",
+      "topic": "Data Types & Operators",
+      "subtopic": "Type Qualifiers",
+      "difficulty": "easy",
+      "questionType": "short_answer",
+      "questionText": "What keyword is used in C to declare a variable whose value cannot be modified after initialization?",
+      "correctAnswers": ["const"],
+      "explanation": "The `const` type qualifier makes a variable read-only.",
+      "marks": 2,
+      "negativeMarks": 0
+    },
+    {
+      "questionId": "C-116",
+      "subject": "C Programming",
+      "topic": "Pointers & Memory",
+      "subtopic": "Address Operator",
+      "difficulty": "medium",
+      "questionType": "short_answer",
+      "questionText": "What unary operator symbol is used in C to obtain the memory address of a variable?",
+      "correctAnswers": ["&"],
+      "explanation": "The ampersand `&` is the address-of operator.",
+      "marks": 2,
+      "negativeMarks": 0
+    },
+    {
+      "questionId": "C-117",
+      "subject": "C Programming",
+      "topic": "File I/O",
+      "subtopic": "File Handling",
+      "difficulty": "hard",
+      "questionType": "short_answer",
+      "questionText": "What standard C library function is used to close an open file stream `FILE *fp`?",
+      "correctAnswers": ["fclose"],
+      "explanation": "`fclose(fp)` flushes buffers and closes the file stream.",
+      "marks": 2,
+      "negativeMarks": 0
+    },
+    {
+      "questionId": "C-118",
+      "subject": "C Programming",
+      "topic": "Functions & Recursion",
+      "subtopic": "Recursion",
+      "difficulty": "medium",
+      "questionType": "write_code",
+      "questionText": "Write a recursive C function `int factorial(int n)` that returns the factorial of non-negative integer `n`.",
+      "codeSnippet": "// Return n! recursively\nint factorial(int n) {\n    // Implement solution\n}",
+      "correctAnswers": [
+        "int factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}"
+      ],
+      "explanation": "Base case: n <= 1 returns 1. Recursive case: n * factorial(n - 1).",
+      "marks": 5,
+      "negativeMarks": 0
+    },
+    {
+      "questionId": "C-119",
+      "subject": "C Programming",
+      "topic": "Pointers & Memory",
+      "subtopic": "Pass-by-Reference",
+      "difficulty": "medium",
+      "questionType": "write_code",
+      "questionText": "Write a C function `void swap(int *a, int *b)` that swaps the integer values pointed to by `a` and `b`.",
+      "codeSnippet": "void swap(int *a, int *b) {\n    // Implement swap using pointers\n}",
+      "correctAnswers": [
+        "void swap(int *a, int *b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}"
+      ],
+      "explanation": "Store *a in temp, assign *b to *a, and assign temp to *b.",
+      "marks": 4,
+      "negativeMarks": 0
+    },
+    {
+      "questionId": "C-120",
+      "subject": "C Programming",
+      "topic": "Arrays & Strings",
+      "subtopic": "String Processing",
+      "difficulty": "hard",
+      "questionType": "write_code",
+      "questionText": "Write a C function `int string_length(const char *str)` that returns the length of a null-terminated string without using `<string.h>`.",
+      "codeSnippet": "int string_length(const char *str) {\n    // Count characters until '\\0'\n}",
+      "correctAnswers": [
+        "int string_length(const char *str) {\n    int len = 0;\n    while (str[len] != '\\0') {\n        len++;\n    }\n    return len;\n}"
+      ],
+      "explanation": "Iterate through pointer array until null terminator '\\0' is encountered.",
+      "marks": 5,
+      "negativeMarks": 0
+    }
+  ]
+}
